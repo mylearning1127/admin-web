@@ -1,15 +1,9 @@
 #!/bin/bash
 
-csv_path=$1
-output_file="output.txt"
+for ((i = 1; i <= 100; i++)); do
 
-# Your processing logic here...
+echo $i
 
-for i in {1..100}; do
-    output="Line $i processed." # Replace with your actual processing logic
-    echo $output >> $output_file
-    sleep 6 # Sleep for 6 seconds, simulate processing time
+sleep 2s
+
 done
-
-echo "Script completed!" >> $output_file
-
