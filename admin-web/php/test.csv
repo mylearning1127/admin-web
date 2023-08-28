@@ -1,0 +1,264 @@
+Year,Industry_aggregation_NZSIOC,Industry_code_NZSIOC,Industry_name_NZSIOC,Units,Variable_code,Variable_name,Variable_category,Value
+2021,Level 1,99999,All industries,Dollars (millions),H01,Total income,Financial performance,"757,504"
+2021,Level 1,99999,All industries,Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"674,890"
+2021,Level 1,99999,All industries,Dollars (millions),H05,"Interest, dividends and donations",Financial performance,"49,593"
+2021,Level 1,99999,All industries,Dollars (millions),H07,Non-operating income,Financial performance,"33,020"
+2021,Level 1,99999,All industries,Dollars (millions),H08,Total expenditure,Financial performance,"654,404"
+2021,Level 1,99999,All industries,Dollars (millions),H09,Interest and donations,Financial performance,"26,138"
+2021,Level 1,99999,All industries,Dollars (millions),H10,Indirect taxes,Financial performance,"6,991"
+2021,Level 1,99999,All industries,Dollars (millions),H11,Depreciation,Financial performance,"27,801"
+2021,Level 1,99999,All industries,Dollars (millions),H12,Salaries and wages paid,Financial performance,"123,620"
+2021,Level 1,99999,All industries,Dollars (millions),H13,Redundancy and severance,Financial performance,275
+2021,Level 1,99999,All industries,Dollars (millions),H14,Salaries and wages to self employed commission agents,Financial performance,"2,085"
+2021,Level 1,99999,All industries,Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"452,963"
+2021,Level 1,99999,All industries,Dollars (millions),H20,Non-operating expenses,Financial performance,"14,806"
+2021,Level 1,99999,All industries,Dollars (millions),H21,Opening stocks,Financial performance,"68,896"
+2021,Level 1,99999,All industries,Dollars (millions),H22,Closing stocks,Financial performance,"69,127"
+2021,Level 1,99999,All industries,Dollars (millions),H23,Surplus before income tax,Financial performance,"103,330"
+2021,Level 1,99999,All industries,Dollars (millions),H24,Total assets,Financial position,"2,512,677"
+2021,Level 1,99999,All industries,Dollars (millions),H25,Current assets,Financial position,"730,587"
+2021,Level 1,99999,All industries,Dollars (millions),H26,Fixed tangible assets,Financial position,"591,351"
+2021,Level 1,99999,All industries,Dollars (millions),H29,Other assets,Financial position,"1,190,739"
+2021,Level 1,99999,All industries,Dollars (millions),H30,Total equity and liabilities,Financial position,"2,512,677"
+2021,Level 1,99999,All industries,Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"813,949"
+2021,Level 1,99999,All industries,Dollars (millions),H32,Current liabilities,Financial position,"933,093"
+2021,Level 1,99999,All industries,Dollars (millions),H33,Other liabilities,Financial position,"765,635"
+2021,Level 1,99999,All industries,Dollars,H34,Total income per employee count,Financial ratios,"400,900"
+2021,Level 1,99999,All industries,Dollars,H35,Surplus per employee count,Financial ratios,"54,700"
+2021,Level 1,99999,All industries,Percentage,H36,Current ratio,Financial ratios,78
+2021,Level 1,99999,All industries,Percentage,H37,Quick ratio,Financial ratios,71
+2021,Level 1,99999,All industries,Percentage,H39,Return on equity,Financial ratios,13
+2021,Level 1,99999,All industries,Percentage,H40,Return on total assets,Financial ratios,4
+2021,Level 1,99999,All industries,Percentage,H41,Liabilities structure,Financial ratios,32
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H01,Total income,Financial performance,"48,731"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H04,Sales of goods and services,Financial performance,"45,650"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H05,"Interest, dividends and donations",Financial performance,640
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H06,"Government funding, grants and subsidies",Financial performance,279
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H07,Non-operating income,Financial performance,"2,163"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H08,Total expenditure,Financial performance,"40,696"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H09,Interest and donations,Financial performance,"2,409"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H10,Indirect taxes,Financial performance,489
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H11,Depreciation,Financial performance,"2,318"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H12,Salaries and wages paid,Financial performance,"6,202"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H13,Redundancy and severance,Financial performance,1
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"29,002"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H20,Non-operating expenses,Financial performance,275
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H21,Opening stocks,Financial performance,"14,215"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H22,Closing stocks,Financial performance,"14,215"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H23,Surplus before income tax,Financial performance,"8,034"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H24,Total assets,Financial position,"190,239"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H25,Current assets,Financial position,"35,038"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H26,Fixed tangible assets,Financial position,"108,875"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H29,Other assets,Financial position,"46,325"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H30,Total equity and liabilities,Financial position,"190,239"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"91,748"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H32,Current liabilities,Financial position,"33,218"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars (millions),H33,Other liabilities,Financial position,"65,274"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars,H34,Total income per employee count,Financial ratios,"419,000"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Dollars,H35,Surplus per employee count,Financial ratios,"69,100"
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Percentage,H36,Current ratio,Financial ratios,105
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Percentage,H37,Quick ratio,Financial ratios,63
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Percentage,H39,Return on equity,Financial ratios,9
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Percentage,H40,Return on total assets,Financial ratios,4
+2021,Level 1,AA,"Agriculture, Forestry and Fishing",Percentage,H41,Liabilities structure,Financial ratios,48
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H01,Total income,Financial performance,"5,394"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"4,925"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H05,"Interest, dividends and donations",Financial performance,205
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H07,Non-operating income,Financial performance,264
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H08,Total expenditure,Financial performance,"4,374"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H09,Interest and donations,Financial performance,181
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H10,Indirect taxes,Financial performance,35
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H11,Depreciation,Financial performance,278
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H12,Salaries and wages paid,Financial performance,887
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H13,Redundancy and severance,Financial performance,0
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"2,970"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H20,Non-operating expenses,Financial performance,22
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H21,Opening stocks,Financial performance,353
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H22,Closing stocks,Financial performance,356
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H23,Surplus before income tax,Financial performance,"1,023"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H24,Total assets,Financial position,"16,790"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H25,Current assets,Financial position,"2,878"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H26,Fixed tangible assets,Financial position,"11,072"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H29,Other assets,Financial position,"2,841"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H30,Total equity and liabilities,Financial position,"16,790"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"8,200"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H32,Current liabilities,Financial position,"3,615"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars (millions),H33,Other liabilities,Financial position,"4,975"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars,H34,Total income per employee count,Financial ratios,"204,000"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Dollars,H35,Surplus per employee count,Financial ratios,"38,700"
+2021,Level 3,AA11,Horticulture and Fruit Growing,Percentage,H36,Current ratio,Financial ratios,80
+2021,Level 3,AA11,Horticulture and Fruit Growing,Percentage,H37,Quick ratio,Financial ratios,70
+2021,Level 3,AA11,Horticulture and Fruit Growing,Percentage,H39,Return on equity,Financial ratios,12
+2021,Level 3,AA11,Horticulture and Fruit Growing,Percentage,H40,Return on total assets,Financial ratios,6
+2021,Level 3,AA11,Horticulture and Fruit Growing,Percentage,H41,Liabilities structure,Financial ratios,49
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H01,Total income,Financial performance,"5,394"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"4,925"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H05,"Interest, dividends and donations",Financial performance,205
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H07,Non-operating income,Financial performance,264
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H08,Total expenditure,Financial performance,"4,374"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H09,Interest and donations,Financial performance,181
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H10,Indirect taxes,Financial performance,35
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H11,Depreciation,Financial performance,278
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H12,Salaries and wages paid,Financial performance,887
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H13,Redundancy and severance,Financial performance,0
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"2,970"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H20,Non-operating expenses,Financial performance,22
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H21,Opening stocks,Financial performance,353
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H22,Closing stocks,Financial performance,356
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H23,Surplus before income tax,Financial performance,"1,023"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H24,Total assets,Financial position,"16,790"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H25,Current assets,Financial position,"2,878"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H26,Fixed tangible assets,Financial position,"11,072"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H29,Other assets,Financial position,"2,841"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H30,Total equity and liabilities,Financial position,"16,790"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"8,200"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H32,Current liabilities,Financial position,"3,615"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars (millions),H33,Other liabilities,Financial position,"4,975"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars,H34,Total income per employee count,Financial ratios,"204,000"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Dollars,H35,Surplus per employee count,Financial ratios,"38,700"
+2021,Level 4,AA111,Horticulture and Fruit Growing,Percentage,H36,Current ratio,Financial ratios,80
+2021,Level 4,AA111,Horticulture and Fruit Growing,Percentage,H37,Quick ratio,Financial ratios,70
+2021,Level 4,AA111,Horticulture and Fruit Growing,Percentage,H39,Return on equity,Financial ratios,12
+2021,Level 4,AA111,Horticulture and Fruit Growing,Percentage,H40,Return on total assets,Financial ratios,6
+2021,Level 4,AA111,Horticulture and Fruit Growing,Percentage,H41,Liabilities structure,Financial ratios,49
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H01,Total income,Financial performance,"11,690"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"10,965"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H05,"Interest, dividends and donations",Financial performance,180
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H07,Non-operating income,Financial performance,545
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H08,Total expenditure,Financial performance,"10,334"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H09,Interest and donations,Financial performance,577
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H10,Indirect taxes,Financial performance,183
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H11,Depreciation,Financial performance,585
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H12,Salaries and wages paid,Financial performance,"1,110"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H13,Redundancy and severance,Financial performance,0
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"7,827"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H20,Non-operating expenses,Financial performance,52
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H21,Opening stocks,Financial performance,"6,078"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H22,Closing stocks,Financial performance,"6,094"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H23,Surplus before income tax,Financial performance,"1,372"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H24,Total assets,Financial position,"60,824"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H25,Current assets,Financial position,"13,012"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H26,Fixed tangible assets,Financial position,"38,952"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H29,Other assets,Financial position,"8,860"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H30,Total equity and liabilities,Financial position,"60,824"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"33,880"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H32,Current liabilities,Financial position,"10,489"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H33,Other liabilities,Financial position,"16,455"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars,H34,Total income per employee count,Financial ratios,"584,200"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Dollars,H35,Surplus per employee count,Financial ratios,"68,600"
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Percentage,H36,Current ratio,Financial ratios,124
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Percentage,H37,Quick ratio,Financial ratios,66
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Percentage,H39,Return on equity,Financial ratios,4
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Percentage,H40,Return on total assets,Financial ratios,2
+2021,Level 3,AA12,"Sheep, Beef Cattle and Grain Farming",Percentage,H41,Liabilities structure,Financial ratios,56
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H01,Total income,Financial performance,"11,690"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"10,965"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H05,"Interest, dividends and donations",Financial performance,180
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H07,Non-operating income,Financial performance,545
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H08,Total expenditure,Financial performance,"10,334"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H09,Interest and donations,Financial performance,577
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H10,Indirect taxes,Financial performance,183
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H11,Depreciation,Financial performance,585
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H12,Salaries and wages paid,Financial performance,"1,110"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H13,Redundancy and severance,Financial performance,0
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"7,827"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H20,Non-operating expenses,Financial performance,52
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H21,Opening stocks,Financial performance,"6,078"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H22,Closing stocks,Financial performance,"6,094"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H23,Surplus before income tax,Financial performance,"1,372"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H24,Total assets,Financial position,"60,824"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H25,Current assets,Financial position,"13,012"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H26,Fixed tangible assets,Financial position,"38,952"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H29,Other assets,Financial position,"8,860"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H30,Total equity and liabilities,Financial position,"60,824"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"33,880"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H32,Current liabilities,Financial position,"10,489"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars (millions),H33,Other liabilities,Financial position,"16,455"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars,H34,Total income per employee count,Financial ratios,"584,200"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Dollars,H35,Surplus per employee count,Financial ratios,"68,600"
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Percentage,H36,Current ratio,Financial ratios,124
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Percentage,H37,Quick ratio,Financial ratios,66
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Percentage,H39,Return on equity,Financial ratios,4
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Percentage,H40,Return on total assets,Financial ratios,2
+2021,Level 4,AA121,"Sheep, Beef Cattle and Grain Farming",Percentage,H41,Liabilities structure,Financial ratios,56
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H01,Total income,Financial performance,"15,740"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"15,293"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H05,"Interest, dividends and donations",Financial performance,153
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H07,Non-operating income,Financial performance,295
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H08,Total expenditure,Financial performance,"12,717"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H09,Interest and donations,Financial performance,"1,238"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H10,Indirect taxes,Financial performance,186
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H11,Depreciation,Financial performance,675
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H12,Salaries and wages paid,Financial performance,"1,719"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H13,Redundancy and severance,Financial performance,0
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"8,838"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H20,Non-operating expenses,Financial performance,61
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H21,Opening stocks,Financial performance,"6,299"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H22,Closing stocks,Financial performance,"6,234"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H23,Surplus before income tax,Financial performance,"2,957"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H24,Total assets,Financial position,"68,385"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H25,Current assets,Financial position,"12,634"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H26,Fixed tangible assets,Financial position,"44,465"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H29,Other assets,Financial position,"11,286"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H30,Total equity and liabilities,Financial position,"68,385"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"25,262"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H32,Current liabilities,Financial position,"12,036"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars (millions),H33,Other liabilities,Financial position,"31,086"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars,H34,Total income per employee count,Financial ratios,"619,200"
+2021,Level 3,AA13,Dairy Cattle Farming,Dollars,H35,Surplus per employee count,Financial ratios,"116,300"
+2021,Level 3,AA13,Dairy Cattle Farming,Percentage,H36,Current ratio,Financial ratios,105
+2021,Level 3,AA13,Dairy Cattle Farming,Percentage,H37,Quick ratio,Financial ratios,53
+2021,Level 3,AA13,Dairy Cattle Farming,Percentage,H39,Return on equity,Financial ratios,12
+2021,Level 3,AA13,Dairy Cattle Farming,Percentage,H40,Return on total assets,Financial ratios,4
+2021,Level 3,AA13,Dairy Cattle Farming,Percentage,H41,Liabilities structure,Financial ratios,37
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H01,Total income,Financial performance,"15,740"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"15,293"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H05,"Interest, dividends and donations",Financial performance,153
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H07,Non-operating income,Financial performance,295
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H08,Total expenditure,Financial performance,"12,717"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H09,Interest and donations,Financial performance,"1,238"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H10,Indirect taxes,Financial performance,186
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H11,Depreciation,Financial performance,675
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H12,Salaries and wages paid,Financial performance,"1,719"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H13,Redundancy and severance,Financial performance,0
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"8,838"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H20,Non-operating expenses,Financial performance,61
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H21,Opening stocks,Financial performance,"6,299"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H22,Closing stocks,Financial performance,"6,234"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H23,Surplus before income tax,Financial performance,"2,957"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H24,Total assets,Financial position,"68,385"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H25,Current assets,Financial position,"12,634"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H26,Fixed tangible assets,Financial position,"44,465"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H29,Other assets,Financial position,"11,286"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H30,Total equity and liabilities,Financial position,"68,385"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"25,262"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H32,Current liabilities,Financial position,"12,036"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars (millions),H33,Other liabilities,Financial position,"31,086"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars,H34,Total income per employee count,Financial ratios,"619,200"
+2021,Level 4,AA131,Dairy Cattle Farming,Dollars,H35,Surplus per employee count,Financial ratios,"116,300"
+2021,Level 4,AA131,Dairy Cattle Farming,Percentage,H36,Current ratio,Financial ratios,105
+2021,Level 4,AA131,Dairy Cattle Farming,Percentage,H37,Quick ratio,Financial ratios,53
+2021,Level 4,AA131,Dairy Cattle Farming,Percentage,H39,Return on equity,Financial ratios,12
+2021,Level 4,AA131,Dairy Cattle Farming,Percentage,H40,Return on total assets,Financial ratios,4
+2021,Level 4,AA131,Dairy Cattle Farming,Percentage,H41,Liabilities structure,Financial ratios,37
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H01,Total income,Financial performance,"2,251"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H04,"Sales, government funding, grants and subsidies",Financial performance,"2,205"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H05,"Interest, dividends and donations",Financial performance,23
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H07,Non-operating income,Financial performance,22
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H08,Total expenditure,Financial performance,"2,138"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H09,Interest and donations,Financial performance,93
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H10,Indirect taxes,Financial performance,18
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H11,Depreciation,Financial performance,129
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H12,Salaries and wages paid,Financial performance,313
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H13,Redundancy and severance,Financial performance,0
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H19,Purchases and other operating expenses,Financial performance,"1,578"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H20,Non-operating expenses,Financial performance,7
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H21,Opening stocks,Financial performance,694
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H22,Closing stocks,Financial performance,698
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H23,Surplus before income tax,Financial performance,117
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H24,Total assets,Financial position,"7,247"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H25,Current assets,Financial position,"1,846"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H26,Fixed tangible assets,Financial position,"4,352"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H29,Other assets,Financial position,"1,049"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H30,Total equity and liabilities,Financial position,"7,247"
+2021,Level 3,AA14,"Poultry, Deer and Other Livestock Farming",Dollars (millions),H31,Shareholders funds or owners equity,Financial position,"2,829"

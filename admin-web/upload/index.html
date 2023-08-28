@@ -1,0 +1,24 @@
+<!-- Your existing HTML code -->
+
+<!-- Add this div to your HTML to display the live stream output -->
+<div id="output-container"></div>
+
+<!-- JavaScript for updating the output container -->
+<script>
+function updateOutput() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "output.log", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("output-container").innerHTML = xhr.responseText;
+        }
+    };
+    xhr.send();
+}
+
+// Update the output every 2 seconds (adjust as needed)
+setInterval(updateOutput, 2000);
+</script>
+</body>
+</html>
+

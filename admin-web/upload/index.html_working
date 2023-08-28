@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+}
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    .upload-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    .upload-form h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .upload-form input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .upload-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .upload-form button:hover {
+        background-color: #0056b3;
+    }
+
+#output-container {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: monospace;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <div class="container">
+        <form class="upload-form" method="post" action="upload_backup.php" enctype="multipart/form-data">
+            <h2>Upload CSV File</h2>
+            <input type="file" name="csvFile" accept=".csv" required>
+            <button type="submit">Upload</button>
+        </form>
+    <div id="output-container"></div>
+    </div>
+</body>
+<script>
+function updateOutput() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "output.log", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("output-container").innerHTML = xhr.responseText;
+        }
+    };
+    xhr.send();
+}
+
+// Update the output every 2 seconds (adjust as needed)
+setInterval(updateOutput, 2000);
+</script>
+</html>
+

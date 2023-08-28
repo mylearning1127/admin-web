@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Processor</title>
+    <script>
+        function fetchUpdates() {
+            var outputDiv = document.getElementById("output");
+
+            // Use AJAX to fetch updates from the output file
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "output.txt", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    outputDiv.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+
+            setTimeout(fetchUpdates, 5000); // Fetch updates every 5 seconds
+        }
+
+        // Start fetching updates when the page loads
+        fetchUpdates();
+    </script>
+</head>
+<body>
+    <h1>CSV Processor</h1>
+    <form action="process_csv.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="csv_file" accept=".csv" required>
+        <button type="submit">Upload and Process</button>
+    </form>
+    <div id="output"></div>
+</body>
+</html>
+

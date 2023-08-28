@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Patch Report</title>
+
+<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+<style>
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: white;
+    font-family: "SERIF", Bodoni MT;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-decoration: none;
+    margin: 0px 740px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tbcustom th, .tbcustom td {
+    background-color: #eaeded;
+    color: #17202a;
+    font-size: 14px;
+    font-family: 'Courier New';
+    padding: 8px;
+}
+
+.tbcustom th {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 15px;
+}
+
+.red-column {
+    background-color: red !important;
+    color: white !important;
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="background: #cdc2ae; color: #34495e; padding:10px 20px; text-align: center; font-size: 20px;">Linux Basic Details - Monthly Report</h1>
+<form action="Linux_basic_info.php">
+    <input type="submit" value="Export" align="right" />
+</form>
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "Linux@123";
+$dbname = "test";
+
+$highlightValues = ["99999", "Dollars (millions)", "H01"]; // Add values to highlight
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $stmt = $conn->prepare("SELECT Year,Industry_aggregation_NZSIOC,Industry_code_NZSIOC,Industry_name_NZSIOC,Units,Variable_code,Variable_name,Variable_category,Value from authors");
+    $stmt->execute();
+
+    // set the resulting array to associative
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    echo "<table class='tbcustom'>";
+    echo "<tr><th>Year</th><th>Industry_aggregation_NZSIOC</th><th>Industry_code_NZSIOC</th><th>Industry_name_NZSIOC</th><th>Units</th><th>Variable_code</th><th>Variable_name</th><th>Variable_category</th><th>Value";
+
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr>";
+        foreach ($row as $key => $value) {
+            // Add red-column class to cells with specified values
+            $cellClass = (in_array($value, $highlightValues)) ? 'class="red-column"' : '';
+            echo "<td $cellClass>$value</td>";
+        }
+        echo "</tr>";
+    }
+
+    echo "</table>";
+}
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+
+$conn = null;
+?>
+
+</body>
+</html>
+
