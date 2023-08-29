@@ -1,67 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>File Upload and Console Example</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    padding: 20px;
-    text-align: center;
-  }
-  #console-container {
-    display: flex;
-    justify-content: center;
-  }
-  #console {
-    width: 100%;
-    max-width: 800px;
-    height: 200px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    overflow: auto;
-  }
-</style>
+    <title>Script Execution</title>
 </head>
 <body>
-<div class="container">
-  <h1>File Upload and Console Example</h1>
-  <form action="upload.php" method="POST" enctype="multipart/form-data" id="uploadForm">
-    <input type="file" name="uploadedFile" id="fileInput">
-    <button type="submit" name="uploadButton">Upload</button>
-  </form>
-</div>
-<div id="console-container">
-  <div id="console"></div>
-</div>
+    <button id="startButton">Start Script</button>
+    <div id="outputContainer"></div>
 
-<script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const startButton = document.getElementById("startButton");
+            const outputContainer = document.getElementById("outputContainer");
 
-const consoleOutput = document.getElementById('console');
-const uploadForm = document.getElementById('uploadForm');
+            startButton.addEventListener("click", async () => {
+                startButton.disabled = true;
+                outputContainer.innerHTML = "";
 
-uploadForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
+                const response = await fetch("execute_script.php"); // Replace with the actual script execution endpoint
+                const reader = response.body.getReader();
 
-  const formData = new FormData(uploadForm);
-  const response = await fetch('upload.php', {
-    method: 'POST',
-    body: formData
-  });
+                while (true) {
+                    const { done, value } = await reader.read();
 
-  const outputText = await response.text();
-  consoleOutput.innerHTML += `<p>${outputText}</p>`;
-  consoleOutput.scrollTop = consoleOutput.scrollHeight;
-});
+                    if (done) {
+                        startButton.disabled = false;
+                        break;
+                    }
 
-
-
-</script>
+                    outputContainer.innerHTML += value;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
