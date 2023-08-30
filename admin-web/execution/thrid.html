@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Output Demo</title>
+  <style>
+    body {
+      font-family: monospace;
+    }
+    #outputContainer {
+      border: 1px solid black;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      font-size: 14px;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  </style>
+  <script>
+    // Embedded JavaScript code for the AJAX request
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("startButton").addEventListener("click", function() {
+        document.getElementById("outputContainer").innerHTML = ""; // Clear previous output
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "thrid.php", true);
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              document.getElementById("outputContainer").textContent = xhr.responseText;
+            } else {
+              document.getElementById("outputContainer").textContent = "Error occurred while fetching output.";
+            }
+          }
+        };
+        xhr.send();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Live Output Demo</h1>
+  <button id="startButton">Start</button>
+  <pre id="outputContainer"></pre>
+</body>
+</html>
+

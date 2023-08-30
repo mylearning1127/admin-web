@@ -1,37 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Script Execution</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV File Upload and Script Execution</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  #console {
+    width: 80%;
+    height: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow: auto;
+    margin-top: 20px;
+  }
+</style>
 </head>
 <body>
-    <button id="startButton">Start Script</button>
-    <div id="outputContainer"></div>
+<h1>CSV File Upload and Script Execution</h1>
+<form id="uploadForm" enctype="multipart/form-data">
+  <input type="file" id="csvFile" accept=".csv">
+  <button type="submit">Upload CSV</button>
+</form>
+<div id="console"></div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const startButton = document.getElementById("startButton");
-            const outputContainer = document.getElementById("outputContainer");
+<script>
+  const uploadForm = document.getElementById('uploadForm');
+  const csvFileInput = document.getElementById('csvFile');
+  const consoleElement = document.getElementById('console');
 
-            startButton.addEventListener("click", async () => {
-                startButton.disabled = true;
-                outputContainer.innerHTML = "";
+  uploadForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const file = csvFileInput.files[0];
+    if (file) {
+      uploadFile(file);
+    } else {
+      logToConsole('Please select a CSV file.');
+    }
+  });
 
-                const response = await fetch("execute_script.php"); // Replace with the actual script execution endpoint
-                const reader = response.body.getReader();
+  function uploadFile(file) {
+    const formData = new FormData();
+    formData.append('csvFile', file);
 
-                while (true) {
-                    const { done, value } = await reader.read();
+    fetch('upload.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(message => {
+      logToConsole(message);
+      executeScript();
+    })
+    .catch(error => {
+      logToConsole('Error during upload: ' + error.message);
+    });
+  }
 
-                    if (done) {
-                        startButton.disabled = false;
-                        break;
-                    }
+  function executeScript() {
+    fetch('execute_script.php', {
+      method: 'POST'
+    })
+    .then(response => response.text())
+    .then(output => {
+      logToConsole('Script output:<br>' + output);
+    })
+    .catch(error => {
+      logToConsole('Error executing script: ' + error.message);
+    });
+  }
 
-                    outputContainer.innerHTML += value;
-                }
-            });
-        });
-    </script>
+  function logToConsole(message) {
+    const timestamp = new Date().toLocaleTimeString();
+    consoleElement.innerHTML += `<p>[${timestamp}] ${message}</p>`;
+    consoleElement.scrollTop = consoleElement.scrollHeight;
+  }
+
+</script>
 </body>
 </html>
 

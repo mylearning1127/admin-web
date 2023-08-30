@@ -7,7 +7,7 @@ echo "Line 2"
 echo "Line 3"
 
 echo "executed on $date"
-for ((i = 1; i <= 5; i++)); do
+for ((i = 1; i <= 100; i++)); do
     echo $i
     sleep 2s
 done
