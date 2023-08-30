@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <script>
+        function updateFormAction() {
+            var selectedValue = document.getElementById("actionDropdown").value;
+            var form = document.getElementById("myForm");
+            if (selectedValue === "add") {
+                form.action = "add.php";
+            } else if (selectedValue === "update") {
+                form.action = "update.php";
+            } else if (selectedValue === "new") {
+                form.action = "new.php";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="myForm" method="post">
+        <label for="cylename">Cylename:</label>
+        <input type="text" id="cylename" name="cylename"><br><br>
+
+        <label for="chnage">Chnage Number:</label>
+        <input type="text" id="chnage" name="chnage"><br><br>
+
+        <label for="actionDropdown">Select Action:</label>
+        <select id="actionDropdown" name="actionDropdown" onchange="updateFormAction()">
+            <option value="add">Add</option>
+            <option value="update">Update</option>
+            <option value="new">New</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
