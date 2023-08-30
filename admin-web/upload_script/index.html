@@ -412,19 +412,18 @@ header .search{
 
 .stylish-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: #3498db;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    box-sizing: border-box;
 }
 
 .stylish-button:hover {
     background-color: #2980b9;
-    transform: scale(1.05);
 }
 
 .stylish-button:focus {
@@ -433,8 +432,8 @@ header .search{
 }
 
 form {
-  margin: 10px;
-  padding: 20px;
+  margin: 15px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
@@ -447,9 +446,9 @@ form label {
 
 form input[type="text"] {
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 3px;
 }
 
@@ -467,9 +466,6 @@ form input[type="submit"]:hover {
   background-color: #2980b9;
   transform: scale(1.05);
 }
-
-
-
 
 
 
@@ -525,24 +521,20 @@ form input[type="submit"]:hover {
     <!-- ... -->
   </div>
 <div class="content">
-<br>
 <form action="popup.php" method="post">
     <table>
         <tr>
-            <td><label for="servername">Enter the Servername</label></td>
+            <td><label for="servername">Cycle Name</label></td>
             <td><input type="text" id="servername" name="fname" required></td>
         </tr>
         <tr>
-            <td><label for="failedreason">Enter the Failed reason</label></td>
+            <td><label for="failedreason">Change Number</label></td>
             <td><input type="text" id="failedreason" name="lname" required></td>
         </tr>
-        <tr>
-            <td colspan="2"><input type="submit" name="update" value="Update Data"></td>
-        </tr>
-    </table>
+</table>
+<button class="stylish-button" id="startButton">Start PHP Script</button>
 </form>
 
-</div>
 
 <script>
 document.getElementById("startButton").addEventListener("click", function() {

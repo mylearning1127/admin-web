@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bash Script Executor</title>
+    <style>
+        #output-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 500px;
+            height: 200px;
+            overflow: auto;
+        }
+
+        #loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Execute Bash Script and Display Output</h1>
+    <form id="script-form" action="execute_script.php" method="post">
+        <label for="change_number">Change Number:</label>
+        <input type="text" name="change_number" id="change_number" required><br><br>
+
+        <label for="cycle_name">Cycle Name:</label>
+        <input type="text" name="cycle_name" id="cycle_name" required><br><br>
+
+        <label for="file">File:</label>
+        <input type="text" name="file" id="file" required><br><br>
+
+        <input type="submit" value="Start">
+    </form>
+
+    <h2>Script Output:</h2>
+    <div id="loading">Executing script...</div>
+    <div id="output-box">
+        <pre id="output"></pre>
+    </div>
+
+    <script>
+        const form = document.getElementById('script-form');
+        const outputElement = document.getElementById('output');
+        const loadingElement = document.getElementById('loading');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            loadingElement.style.display = 'block';
+            outputElement.textContent = '';
+
+            const formData = new FormData(form);
+            const response = await fetch('execute_script.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const output = await response.text();
+            loadingElement.style.display = 'none';
+            outputElement.textContent = output;
+        });
+    </script>
+</body>
+</html>
+

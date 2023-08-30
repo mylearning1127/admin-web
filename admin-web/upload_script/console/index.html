@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bash Script Executor</title>
+    <style>
+        #output-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 500px;
+            height: 300px;
+            overflow: auto;
+        }
+
+        #loading {
+            display: none;
+        }
+
+.loader {
+        display: none;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 100px; /* Adjust the width as needed */
+        height: 100px; /* Match the width to maintain a circular shape */
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Execute Bash Script and Display Output</h1>
+    <form id="script-form" action="execute_script.php" method="post">
+        <label for="change_number">Change Number:</label>
+        <input type="text" name="change_number" id="change_number" required><br><br>
+
+        <label for="cycle_name">Cycle Name:</label>
+        <input type="text" name="cycle_name" id="cycle_name" required><br><br>
+
+        <label for="file">File:</label>
+        <input type="text" name="file" id="file" required><br><br>
+
+        <input type="submit" value="Start">
+    </form>
+
+    <h2>Script Output:</h2>
+    <div id="output-box">
+        <div id="loading"></div>
+        <div class="loader"></div>
+        <pre id="output"></pre>
+    </div>
+
+<script>
+    const form = document.getElementById('script-form');
+    const outputElement = document.getElementById('output');
+    const loadingElement = document.getElementById('loading');
+    const loader = document.querySelector('.loader'); // Get the loader element
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        loadingElement.style.display = 'block';
+        loader.style.display = 'block'; // Show the loader
+        outputElement.textContent = ''; // Clear any existing output
+
+        const formData = new FormData(form);
+        const response = await fetch('execute_script.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        const output = await response.text();
+        loadingElement.style.display = 'none';
+        loader.style.display = 'none'; // Hide the loader
+        outputElement.textContent = output;
+    });
+</script>
+
+
+</body>
+</html>
+
