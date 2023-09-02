@@ -24,6 +24,7 @@ if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > 
 }
 
 $_SESSION["last_activity"] = time(); // Update last activity timestamp
+
 ?>
 
 
@@ -576,6 +577,7 @@ header .search{
 }
 
 
+
 </style>
 </head>
 <body>
@@ -595,7 +597,7 @@ header .search{
 
 </div>
   
-    <header>
+<header>
         <a href="" class="logo"> </a> 
         <div class="group">
             <ul class="navigation">
@@ -603,7 +605,10 @@ header .search{
   <img src="inbox.png" alt="Inbox" class="inboxButton">
   <span class="badge">3</span>
 </div>
-<a href="?logout">Logout</a>
+<a href="" class="logo"><?php echo $_SESSION["username"]; ?></a>
+<a href="?logout" style="display: inline-block; padding: 8px 8px; background-color: #007bff; color: #fff; text-decoration: none; border: none; border-radius: 5px;">Logout</a>
+
+
 <!--
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>

@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if the script output is "pass"
     if ($script_output === "pass") {
         $_SESSION["authenticated"] = true; // Mark user as authenticated
+        $_SESSION["username"] = $username; 
         header("Location: index.php"); // Redirect to the welcome page
         exit();
     } else {
@@ -102,7 +103,7 @@ body, html {
     <div class="container">
         <form class="login-form" method="post" action="login.php">
             <h2>Login</h2>
-            <input type="text" placeholder="Username" name="username" required>
+            <input type="text" placeholder="username" name="username" required>
             <input type="password" placeholder="Password" name="password" required>
             <button type="submit">Click Me &nbsp;>>></button>
             <?php if (isset($error_message)) { echo "<p class='error'>$error_message</p>"; } ?>
