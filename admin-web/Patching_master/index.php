@@ -609,13 +609,6 @@ header .search{
 <a href="?logout" style="display: inline-block; padding: 8px 8px; background-color: #007bff; color: #fff; text-decoration: none; border: none; border-radius: 5px;">Logout</a>
 
 
-<!--
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
--->
             </ul>
             <div class="search">
                 <span class="icon">
@@ -709,14 +702,14 @@ form.addEventListener('submit', async (e) => {
  // JavaScript code for automatic logout after inactivity
         var timeout = setTimeout(function() {
             window.location.href = 'welcome.php?logout';
-        }, <?php echo ($inactive_timeout * 1000); ?>); // Convert seconds to milliseconds
+        }, <?php echo ($inactive_timeout * 900000000); ?>); // Convert seconds to milliseconds
 
         // Function to clear the automatic logout timeout on user interaction
         function resetTimeout() {
             clearTimeout(timeout);
             timeout = setTimeout(function() {
                 window.location.href = 'welcome.php?logout';
-            }, <?php echo ($inactive_timeout * 1000); ?>); // Convert seconds to milliseconds
+            }, <?php echo ($inactive_timeout * 900000000); ?>); // Convert seconds to milliseconds
         }
 
         // Attach the resetTimeout function to user interactions
