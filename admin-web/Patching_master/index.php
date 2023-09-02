@@ -1,3 +1,32 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["authenticated"]) || !$_SESSION["authenticated"]) {
+    header("Location: login.php"); // Redirect to login if not authenticated
+    exit();
+}
+
+// Logout functionality
+if (isset($_GET["logout"])) {
+    session_unset();    // Unset all session variables
+    session_destroy();  // Destroy the session
+    header("Location: login.php"); // Redirect to login page after logout
+    exit();
+}
+
+// Check for inactivity timeout
+$inactive_timeout = 120; // 2 minutes
+if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > $inactive_timeout)) {
+    session_unset();    // Unset all session variables
+    session_destroy();  // Destroy the session
+    header("Location: login.php"); // Redirect to login page due to inactivity
+    exit();
+}
+
+$_SESSION["last_activity"] = time(); // Update last activity timestamp
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +56,7 @@ header{
     left: 0;
     width: 100%;
     height: 48px;
-    background: #2a2438;
+    background: #352F44;
     padding: 20px 40px;
     display: flex;
     justify-content:space-between;
@@ -100,49 +129,6 @@ header .search{
     font-size: 1.5em;
     z-index: 10;
     cursor: pointer;
-}
-.searchBox{
-    position: absolute;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background: #fff;
-    align-items: center;
-    padding: 0 30px;
-    transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -ms-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-}
-.searchBox.active{
-    right: 0;
-}
-.searchBox input{
-    width: 100%;
-    border: none;
-    outline: none;
-    height: 50px;
-    color: #333;
-    font-size: 1.25em;
-    background: #fff;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-#searchBtn{
-    position: relative;
-    left: 30px;
-    top: 2.5px;
-    color: rgb(101, 186, 158);
-    transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -ms-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-}
-#searchBtn.active{
-    left: 0;
 }
 #closeBtn{
     opacity: 0;
@@ -230,7 +216,7 @@ header .search{
   left: 0;
   width: 55px;
   height: 100%;
-  background: #352f44;
+  background: #5C5470;
   z-index: 1;
   
 }
@@ -431,42 +417,6 @@ header .search{
     background-color: #2980b9;
 }
 
-form {
-  margin: 15px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-form label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-form input[type="text"] {
-  width: 100%;
-  padding: 6px;
-  margin-bottom: 15px;
-  border: 2px solid #ccc;
-  border-radius: 3px;
-}
-
-form input[type="submit"] {
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-form input[type="submit"]:hover {
-  background-color: #2980b9;
-  transform: scale(1.05);
-}
-
 #output-box {
             border: 1px solid #ccc;
             padding: 10px;
@@ -489,7 +439,7 @@ form input[type="submit"]:hover {
         -webkit-animation: spin 2s linear infinite;
         animation: spin 2s linear infinite;
         position: absolute;
-        top: 70%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
 }
@@ -509,7 +459,7 @@ form input[type="submit"]:hover {
     border: 1px solid #ccc;
     padding: 5px;
     width: 92vw;
-    height: 50vh;
+    height: 60vh;
     overflow: auto;
     margin: 15px;
     border-radius: 5px;
@@ -518,33 +468,112 @@ form input[type="submit"]:hover {
 }
 
 
-        .form-row {
-            display: flex;
-            max-width: 350px;
-            align-items: center;
-            margin-bottom: 10px;
-        }
 
-        .form-row label {
-            flex: 1;
-            margin-right: 10px;
-        }
+#output-box pre {
+   font-family: 'Courier New', monospace;
+    color: darkgreen; /* Replace with your desired font color */
+    font-size: 15px; /* You can adjust the font size as needed */
+}
 
-        .form-row select,
-        .form-row input[type="text"] {
-            flex: 1;
-            width: 20%; /* Set the desired width */
-            height: 30px;
-            padding: 6px;
-            border: 2px solid #ccc;
-            border-radius: 3px;
-        }
 
-        .stylish-button {
-            display: block;
-            width: 100%; /* Make the button span the entire width */
-            margin-top: 20px;
-        }
+/* Add this CSS code after your existing styles */
+
+/* Form container */
+.form-container {
+  width: 96%; /* Adjust the width as needed */
+  margin-top: 14px;
+  margin-left: 20px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Bitter', serif;
+}
+
+/* Form rows */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Bitter', serif;
+}
+
+/* Form columns (parallel text boxes) */
+.form-column {
+  flex: 1;
+  margin-right: 10px; /* Adjust spacing between columns */
+  font-family: 'Bitter', serif;
+}
+
+.form-column:last-child {
+  margin-right: 10; /* Remove margin for the last column */
+  font-family: 'Bitter', serif;
+}
+
+/* Label styles */
+.form-column label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: 'Bitter', serif;
+}
+
+/* Input styles */
+.form-column input[type="text"],
+.form-column select,
+.form-column button {
+  width: 70%;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Bitter', serif;
+}
+
+/* Dropdown select style */
+.form-column select {
+  width: 70%;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("arrow-down.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 30px; /* Adjust as needed */
+  cursor: pointer;
+  font-family: 'Bitter', serif;
+}
+
+
+/* Button style */
+.stylish-button {
+  display: inline-block;
+  padding: 10px 200px;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-sizing: border-box;
+  font-family: 'Bitter', serif;
+}
+
+.stylish-button:hover {
+  background-color: #2980b9;
+}
+
+.stylish-button:focus {
+  outline: none;
+  background-color: #2980b9;
+}
 
 
 </style>
@@ -574,6 +603,7 @@ form input[type="submit"]:hover {
   <img src="inbox.png" alt="Inbox" class="inboxButton">
   <span class="badge">3</span>
 </div>
+<a href="?logout">Logout</a>
 <!--
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -590,9 +620,6 @@ form input[type="submit"]:hover {
                 <ion-icon name="grid-outline" class="menuToggle"></ion-icon>
             </div>
         </div>
-        <div class="searchBox" id="searchBoxBtn">
-            <input type="text" name="" id="" placeholder="Search here...">
-        </div>
     </header>
 	
 	<div class="searchBox" id="searchBoxBtn">
@@ -601,31 +628,39 @@ form input[type="submit"]:hover {
 
 <div class="content">
 
-<form id="script-form" action="#" method="post">
-            <div class="form-row">
-                <label for="servername">Cycle Name</label>
-                <input type="text" id="servername" name="fname" required>
-            </div>
-            <div class="form-row">
-                <label for="failedreason">Change Number</label>
-                <input type="text" id="failedreason" name="lname" required>
-            </div>
-            <div class="form-row">
-                <label for="action">Select Action</label>
-                <select id="action" name="action" class="dropdown-select">
-                    <option value="add">Add</option>
-                    <option value="update">Update</option>
-                    <option value="new">New</option>
-                </select>
-            </div>
-           
-             <div class="form-row">
-    <label for="csvFile">Upload CSV File</label>
-    <input type="file" id="csvFile" name="csvFile">
+<div class="form-container">
+  <form id="script-form" action="#" method="post">
+    <div class="form-row">
+      <div class="form-column">
+        <label for="servername">Cycle Name</label>
+        <input type="text" id="" name="cycle_name" required>
+      </div>
+      <div class="form-column">
+        <label for="failedreason">Change Number</label>
+        <input type="text" id="change_number" name="change_number" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-column">
+        <label for="action">Select Action</label>
+        <select id="action" name="action" class="dropdown-select">
+          <option value="add">Add</option>
+          <option value="update">Update</option>
+          <option value="new">New</option>
+        </select>
+      </div>
+      <div class="form-column">
+        <label for="csvFile">Upload CSV File</label>
+        <input type="file" id="csvFile" name="csvFile">
+      </div>
+    </div>
+    <div class="form-row">
+      <button class="stylish-button" id="startButton">Launch</button>
+    </div>
+  </form>
 </div>
-      
-            <button class="stylish-button" id="startButton">Launch</button>
-        </form>
+
+
 
         <div id="output-box">
             <div id="loading"></div>
@@ -633,6 +668,7 @@ form input[type="submit"]:hover {
             <pre id="output"></pre>
         </div>
     </div>
+
 <script>
 
 const form = document.getElementById('script-form');
@@ -665,8 +701,24 @@ form.addEventListener('submit', async (e) => {
     console.log(output);
 });
 
+ // JavaScript code for automatic logout after inactivity
+        var timeout = setTimeout(function() {
+            window.location.href = 'welcome.php?logout';
+        }, <?php echo ($inactive_timeout * 1000); ?>); // Convert seconds to milliseconds
+
+        // Function to clear the automatic logout timeout on user interaction
+        function resetTimeout() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                window.location.href = 'welcome.php?logout';
+            }, <?php echo ($inactive_timeout * 1000); ?>); // Convert seconds to milliseconds
+        }
+
+        // Attach the resetTimeout function to user interactions
+        window.addEventListener("mousemove", resetTimeout);
+        window.addEventListener("keydown", resetTimeout);
+
 </script>
 
 </body>
 </html>
-

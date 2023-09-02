@@ -1,15 +1,16 @@
 #!/bin/bash
 
-echo "############################################"
-echo "               Launching scipt   NEW           "
-echo "############################################"
-date=$(date)
+echo $1
+echo $2
+echo $3
+
+date=$(date +"%Y-%m-%d %H:%M:%S")
 
 echo "Line 1"
 echo "Line 2"
 
-echo "executed on $date"
-for ((i = 1; i <= 10; i++)); do
+echo "[$date] [INFO]: executed on $date"
+for ((i = 1; i <= 5; i++)); do
     echo $i
 sleep 1s
 done
