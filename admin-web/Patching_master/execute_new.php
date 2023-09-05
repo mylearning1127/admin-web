@@ -9,6 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $originalFileName = $_FILES["csvFile"]["name"];
     $destinationDirectory = "tmp/";
     $destinationPath = $destinationDirectory . $originalFileName;
+    $startdate = $_POST["startdate"];
+    $enddate = $_POST["enddate"];
 
 
     $uploadSuccess = move_uploaded_file($uploadedFile, $destinationPath);
@@ -33,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Construct the bash command
-    $bashCommand = "bash ./test_new.sh $changeNumber $cycleName $destinationPath";
+    $bashCommand = "bash ./test_new.sh $changeNumber $cycleName $destinationPath $startdate $enddate";
 
     echo "[$timestamp] [INFO]: Starting script execution.\n";
 

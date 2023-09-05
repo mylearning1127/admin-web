@@ -15,7 +15,7 @@ if (isset($_GET["logout"])) {
 }
 
 // Check for inactivity timeout
-$inactive_timeout = 120; // 2 minutes
+$inactive_timeout = 900; // 15 minutes
 if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > $inactive_timeout)) {
     session_unset();    // Unset all session variables
     session_destroy();  // Destroy the session
@@ -496,7 +496,7 @@ header .search{
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: 'Bitter', serif;
 }
 
@@ -524,7 +524,7 @@ header .search{
 .form-column input[type="text"],
 .form-column select,
 .form-column button {
-  width: 70%;
+  width: 60%;
   padding: 2px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -554,13 +554,14 @@ header .search{
 .stylish-button {
   display: inline-block;
   padding: 10px 200px;
-  margin-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   width: 100%;
   background-color: #3498db;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   box-sizing: border-box;
@@ -584,7 +585,7 @@ header .search{
 <div class="sidebar">
 
   <div class="tooltip" data-tooltip="Main Page">
-        <a href="https://example.com" target="_blank">
+        <a href="logs.php" target="_blank">
           <img src="main.png" alt="Main Page" class="sidebarButton">
         </a>
       </div>
@@ -598,14 +599,12 @@ header .search{
 </div>
   
 <header>
-        <a href="" class="logo"> </a> 
+        <a href="" class="logo">Linux</a> 
+<p style="margin-top: 10px;color: white; text-decoration: none; font-size: 1em;  text-transform: capitalize; letter-spacing: 0.1em;">Welcome,   <?php echo $_SESSION["username"]; ?></p>
         <div class="group">
             <ul class="navigation">
 			<div class="inbox-icon tooltip" data-tooltip="Inbox">
-  <img src="inbox.png" alt="Inbox" class="inboxButton">
-  <span class="badge">3</span>
 </div>
-<a href="" class="logo"><?php echo $_SESSION["username"]; ?></a>
 <a href="?logout" style="display: inline-block; padding: 8px 8px; background-color: #007bff; color: #fff; text-decoration: none; border: none; border-radius: 5px;">Logout</a>
 
 
@@ -637,23 +636,36 @@ header .search{
         <label for="failedreason">Change Number</label>
         <input type="text" id="change_number" name="change_number" required>
       </div>
-    </div>
-    <div class="form-row">
+
       <div class="form-column">
         <label for="action">Select Action</label>
         <select id="action" name="action" class="dropdown-select">
+         <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- No Slection --</option>
           <option value="add">Add</option>
           <option value="update">Update</option>
           <option value="new">New</option>
         </select>
       </div>
+
+
+    </div>
+    <div class="form-row">
+      <div class="form-column">
+        <label for="startdate">Patching State Date</label>
+	<input style="width: 240px;" type="date" name="startdate" id="startdate">
+      </div>
+      <div class="form-column">
+         <label for="enddate">Patching End Date</label>
+	 <input style="width: 240px;" type="date" name="enddate" id="enddate">
+      </div>
+
       <div class="form-column">
         <label for="csvFile">Upload CSV File</label>
         <input type="file" id="csvFile" name="csvFile">
       </div>
     </div>
     <div class="form-row">
-      <button class="stylish-button" id="startButton">Launch</button>
+      <button class="stylish-button" id="startButton"><b>Launch</b></button>
     </div>
   </form>
 </div>
@@ -702,19 +714,21 @@ form.addEventListener('submit', async (e) => {
  // JavaScript code for automatic logout after inactivity
         var timeout = setTimeout(function() {
             window.location.href = 'welcome.php?logout';
-        }, <?php echo ($inactive_timeout * 900000000); ?>); // Convert seconds to milliseconds
+        }, <?php echo ($inactive_timeout * 600000); ?>); // Convert seconds to milliseconds
 
         // Function to clear the automatic logout timeout on user interaction
         function resetTimeout() {
             clearTimeout(timeout);
             timeout = setTimeout(function() {
-                window.location.href = 'welcome.php?logout';
-            }, <?php echo ($inactive_timeout * 900000000); ?>); // Convert seconds to milliseconds
+                window.location.href = 'index..php?logout';
+            }, <?php echo ($inactive_timeout * 600000); ?>); // Convert seconds to milliseconds
         }
 
         // Attach the resetTimeout function to user interactions
         window.addEventListener("mousemove", resetTimeout);
         window.addEventListener("keydown", resetTimeout);
+
+
 
 </script>
 
